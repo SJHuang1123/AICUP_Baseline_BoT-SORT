@@ -8,8 +8,8 @@ import logging
 import os
 
 import torch
-from torch._six import string_classes
-from collections import Mapping
+#from torch._six import string_classes
+from collections.abc import Mapping
 
 from fast_reid.fastreid.config import configurable
 from fast_reid.fastreid.utils import comm
@@ -18,7 +18,7 @@ from .common import CommDataset
 from .data_utils import DataLoaderX
 from .datasets import DATASET_REGISTRY
 from .transforms import build_transforms
-
+string_classes = str
 
 __all__ = [
     "build_reid_train_loader",
